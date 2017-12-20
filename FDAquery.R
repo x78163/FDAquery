@@ -30,8 +30,8 @@ google.trends = gtrends(c("bitcoin bubble"), geo = c("CA"), gprop = "web", time 
 
 library("rvest")
 
-trend=gtrends("",  time = "now 1-H", gprop = c("web", "news",
-                                                                   "images", "froogle", "youtube"), category = 45, hl = "en-US")
+googleGeo = "US-TN"
+googleTime= "today+5-y"
 
 fentanyl1 = c("china girl", "china white", "dance fever", "king ivory", "fentanyl")
 fentanyl2 = c("goodfella", "murder 8", "great bear", "tango & cash", "birria")
@@ -55,48 +55,78 @@ orthoP3= c("head pain", "neck pain", "back pain", "ankle pain")
 
 psychS1= c("depressed", "suicidal", "make the pain go away",  "end it all", "life is unbearable")
 psychS2= c("i'm exhausted", "can't sleep", "can't focus",  "wake up tired", "stressed out")
-psychS3= c("headache", "seasonal affected disorder", " psychologist", " psychiatrist")
+psychS3= c("headache", "seasonal affected disorder", " psychologist", " psychiatrist", "migrane")
 
-fentanylR1=gtrends(fentanyl1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-fentanylR2=gtrends(fentanyl2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-fentanylR3=gtrends(fentanyl3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+dental1 = c("tooth hurts", "toothache", "cavity", "jaw hurts", "tooth fell out")
+dental2 = c("sore mouth", "sore gums", "dentist", "mouthwash", "gums bleeding")
 
 
-OxycontinR1=gtrends(Oxycontin1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+sex1 = c("am i pregnant", "home pregnancy test", "pregnancy test", "condom broke", "can i get pregnant from")
+sex2 = c("it burns when I pee", "chlamidia", "herpes", "HPV", "genital warts")
+sex3 = c("abortion clinic", "morning after pill", "plan b", "where can i get an abortion", "how much is an abortion")
+sex4 = c("have an std", "common std", "what can i take for an std", "itches")
 
-OxycontinR2=gtrends(Oxycontin2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+urology1 = c("i can't pee", "hurts to pee", "pee all the time", "pee is brown", "peeing blood")
+urology2 = c("kidneys hurt","kidney stones", "urethra")
 
-orthoRb1=gtrends(orthoB1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+pediatric1 = c("my baby has a fever", "my baby is purple", "my baby is sick", "my baby is crying", "my baby vomited")
 
-orthoRb2=gtrends(orthoB2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+oncology1= c("i found a lump", "do i have cancer", "sun tanning", "tanning salons")
 
-orthoRb3=gtrends(orthoB3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+eent1 = c("sore throat", "cough", "hacking up", "lost my voice", "cough drops")
+eent2 = c("coughing up blood")
 
+cardio1 = c("chest pain", "high blood pressure", "left arm numb", "am i having a heart attack", "heart attack symptoms")
 
-orthoRs1=gtrends(orthoS1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+flu = c("flu", "have a cold", "flu medicine", "flu symptoms", "how long is the flu")
 
-orthoRs2=gtrends(orthoS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-orthoRs3=gtrends(orthoS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-orthoRp1=gtrends(orthoP1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-orthoRp2=gtrends(orthoP2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-orthoRp3=gtrends(orthoP3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-
-psychRs1=gtrends(psychS1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-psychRs2=gtrends(psychS2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
-psychRs3=gtrends(psychS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+fentanylR1=gtrends(fentanyl1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+fentanylR2=gtrends(fentanyl2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+fentanylR3=gtrends(fentanyl3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 
 
-interest = as.data.frame(fentanyl$interest_over_time)
-fentanylR3$related_topics
+OxycontinR1=gtrends(Oxycontin1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+OxycontinR2=gtrends(Oxycontin2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRb1=gtrends(orthoB1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRb2=gtrends(orthoB2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRb3=gtrends(orthoB3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRs1=gtrends(orthoS1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRs2=gtrends(orthoS3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRs3=gtrends(orthoS3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRp1=gtrends(orthoP1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRp2=gtrends(orthoP2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+orthoRp3=gtrends(orthoP3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+
+psychRs1=gtrends(psychS1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+psychRs2=gtrends(psychS2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+psychRs3=gtrends(psychS3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+dentalR1 = gtrends(dental1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+dentalR2 = gtrends(dental2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+  
+sexR1 = gtrends(sex1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+sexR2 = gtrends(sex2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+sexR3 = gtrends(sex3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+sexR4 = gtrends(sex4, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+urologyR1 = gtrends(urology1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+urologyR2 = gtrends(urology2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+  
+pediatricR1 = gtrends(pediatric1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+oncologyR1=gtrends(oncology1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+eentR1 = gtrends(eent1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+eentR2 = gtrends(eent2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+cardioR1 = gtrends(cardio1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+fluR = gtrends(flu, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
 #------------Drug Corner---------------------------
 plot(fentanylR1)
 plot(fentanylR2)
@@ -121,6 +151,79 @@ plot(orthoRp3)
 plot(psychRs1)
 plot(psychRs2)
 plot(psychRs3)
+
+plot(dentalR1)
+plot(dentalR2)
+
+plot(sexR1)
+plot(sexR2)
+plot(sexR3)
+plot(sexR4)
+
+plot(urologyR1)
+plot(urologyR2)
+
+plot(pediatricR1)
+
+plot(oncologyR1)
+
+plot(eentR1)
+plot(eentR2)
+
+plot(cardioR1)
+
+plot(fluR)
+
+
+fentanylTwitter = "china girl OR fentanyl OR goodfella OR birria OR fent"
+
+
+OxycontinTwitter = c("oxy OR greenies OR ercs OR percs OR 512s OR oxycontin OR m30s")
+
+orthoB1= c("broken arm", "broken hand", "broken finger",  "broken wrist", "broken shoulder")
+orthoB2= c("broken toe", "broken shin", "broken knee",  "broken leg", "broken hip")
+orthoB3= c("broken head", "broken neck", "broken back", "broken ankle")
+
+orthoS1= c("sprained arm", "sprained hand", "sprained finger",  "sprained wrist", "sprained shoulder")
+orthoS2= c("sprained toe", "sprained shin", "sprained knee",  "sprained leg", "sprained hip")
+orthoS3= c("sprained head", "sprained neck", "sprained back", "sprained ankle")
+
+orthoP1= c("arm pain", "hand pain", "finger pain",  "wrist pain", "shoulder pain")
+orthoP2= c("toe pain", "shin pain", "knee pain",  "leg pain", "hip pain")
+orthoP3= c("head pain", "neck pain", "back pain", "ankle pain")
+
+psychS1= c("depressed", "suicidal", "make the pain go away",  "end it all", "life is unbearable")
+psychS2= c("i'm exhausted", "can't sleep", "can't focus",  "wake up tired", "stressed out")
+psychS3= c("headache", "seasonal affected disorder", " psychologist", " psychiatrist", "migrane")
+
+dental1 = c("tooth hurts", "toothache", "cavity", "jaw hurts", "tooth fell out")
+dental2 = c("sore mouth", "sore gums", "dentist", "mouthwash", "gums bleeding")
+
+
+sex1 = c("am i pregnant", "home pregnancy test", "pregnancy test", "condom broke", "can i get pregnant from")
+sex2 = c("it burns when I pee", "chlamidia", "herpes", "HPV", "genital warts")
+sex3 = c("abortion clinic", "morning after pill", "plan b", "where can i get an abortion", "how much is an abortion")
+sex4 = c("have an std", "common std", "what can i take for an std", "itches")
+
+urology1 = c("i can't pee", "hurts to pee", "pee all the time", "pee is brown", "peeing blood")
+urology2 = c("kidneys hurt","kidney stones", "urethra")
+
+pediatric1 = c("my baby has a fever", "my baby is purple", "my baby is sick", "my baby is crying", "my baby vomited")
+
+oncology1= c("i found a lump", "do i have cancer", "sun tanning", "tanning salons")
+
+eent1 = c("sore throat", "cough", "hacking up", "lost my voice", "cough drops")
+eent2 = c("coughing up blood")
+
+cardio1 = c("chest pain", "high blood pressure", "left arm numb", "am i having a heart attack", "heart attack symptoms")
+
+flu = c("flu", "have a cold", "flu medicine", "flu symptoms", "how long is the flu")
+
+
+drugs = searchTwitter(OxycontinTwitter, n=500, lang = 'en', since = "2017-12-13", until = "2017-12-19" , geocode='36.3134,-82.3534,100mi')
+
+tweetsdf = twListToDF(drugs)
+
 
 #------------Communicable Disease Corner---------------------------
 
