@@ -30,19 +30,100 @@ google.trends = gtrends(c("bitcoin bubble"), geo = c("CA"), gprop = "web", time 
 
 library("rvest")
 
-trend=gtrends("", geo = "US-TN-531", time = "today+5-y", gprop = c("web", "news",
+trend=gtrends("",  time = "now 1-H", gprop = c("web", "news",
                                                                    "images", "froogle", "youtube"), category = 45, hl = "en-US")
 
-negativeSearch=gtrends(c("bitcoin bubble", "bitcoin fraud", "bitcoin stolen", "bitcoin crash"),  time = "now 1-H", gprop = c("web", "news",
-                                                                                                                             "images", "froogle", "youtube"),  hl = "en-US")
-Sys.sleep(4)
-negativeSearch2=gtrends(c("bitcoin crash coming", "bitcoin bubble about to burst", "sell bitcoin", "stolen bitcoin wallet"),  time = "now 1-H", gprop = c("web", "news",
-                                                                                                                                                          "images", "froogle", "youtube"),  hl = "en-US")
-Sys.sleep(5) 
-positiveSearch=gtrends(c("bitcoin breaking", "bitcoin record", "bitcoin rising", "bitcoin increase", "buy bitcoin"),  time = "now 1-H", gprop = c("web", "news",
-                                                                                                                                                  "images", "froogle", "youtube"),  hl = "en-US")
+fentanyl1 = c("china girl", "china white", "dance fever", "king ivory", "fentanyl")
+fentanyl2 = c("goodfella", "murder 8", "great bear", "tango & cash", "birria")
+fentanyl3 = c("fent", "fenty", "toe tag dope")
+#fentanyl3 = c("fentanyl")
+  
+Oxycontin1 = c("oxy", "greenies", "ercs",  "percs")
+Oxycontin2 = c("512s", "hillbilly heroin", "oxycontin","m-30s")
 
-plot(negativeSearch)
+orthoB1= c("broken arm", "broken hand", "broken finger",  "broken wrist", "broken shoulder")
+orthoB2= c("broken toe", "broken shin", "broken knee",  "broken leg", "broken hip")
+orthoB3= c("broken head", "broken neck", "broken back", "broken ankle")
+
+orthoS1= c("sprained arm", "sprained hand", "sprained finger",  "sprained wrist", "sprained shoulder")
+orthoS2= c("sprained toe", "sprained shin", "sprained knee",  "sprained leg", "sprained hip")
+orthoS3= c("sprained head", "sprained neck", "sprained back", "sprained ankle")
+
+orthoP1= c("arm pain", "hand pain", "finger pain",  "wrist pain", "shoulder pain")
+orthoP2= c("toe pain", "shin pain", "knee pain",  "leg pain", "hip pain")
+orthoP3= c("head pain", "neck pain", "back pain", "ankle pain")
+
+psychS1= c("depressed", "suicidal", "make the pain go away",  "end it all", "life is unbearable")
+psychS2= c("i'm exhausted", "can't sleep", "can't focus",  "wake up tired", "stressed out")
+psychS3= c("headache", "seasonal affected disorder", " psychologist", " psychiatrist")
+
+fentanylR1=gtrends(fentanyl1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+fentanylR2=gtrends(fentanyl2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+fentanylR3=gtrends(fentanyl3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+
+OxycontinR1=gtrends(Oxycontin1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+OxycontinR2=gtrends(Oxycontin2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRb1=gtrends(orthoB1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRb2=gtrends(orthoB2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRb3=gtrends(orthoB3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+
+orthoRs1=gtrends(orthoS1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRs2=gtrends(orthoS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRs3=gtrends(orthoS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRp1=gtrends(orthoP1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRp2=gtrends(orthoP2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+orthoRp3=gtrends(orthoP3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+
+psychRs1=gtrends(psychS1, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+psychRs2=gtrends(psychS2, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+psychRs3=gtrends(psychS3, geo = "US-TN", time = "today 12-m", gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
+
+
+interest = as.data.frame(fentanyl$interest_over_time)
+fentanylR3$related_topics
+#------------Drug Corner---------------------------
+plot(fentanylR1)
+plot(fentanylR2)
+plot(fentanylR3)
+
+plot(OxycontinR1)
+plot(OxycontinR2)
+
+#------------Ortho Corner---------------------------
+plot(orthoRb1)
+plot(orthoRb2)
+plot(orthoRb3)
+
+plot(orthoRs1)
+plot(orthoRs2)
+plot(orthoRs3)
+
+plot(orthoRp1)
+plot(orthoRp2)
+plot(orthoRp3)
+
+plot(psychRs1)
+plot(psychRs2)
+plot(psychRs3)
+
+#------------Communicable Disease Corner---------------------------
+
 top = 0
 top$freq = as.data.frame(trend$subject)
 top
