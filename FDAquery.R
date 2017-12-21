@@ -39,7 +39,7 @@ fentanyl3 = c("fent", "fenty", "toe tag dope")
 #fentanyl3 = c("fentanyl")
   
 Oxycontin1 = c("oxy", "greenies", "ercs",  "percs")
-Oxycontin2 = c("512s", "hillbilly heroin", "oxycontin","m-30s")
+Oxycontin2 = c("512s", "hillbilly heroin", "oxycontin","movantik")
 
 orthoB1= c("broken arm", "broken hand", "broken finger",  "broken wrist", "broken shoulder")
 orthoB2= c("broken toe", "broken shin", "broken knee",  "broken leg", "broken hip")
@@ -112,19 +112,19 @@ sexR1 = gtrends(sex1, geo = googleGeo, time = googleTime, gprop = c("web", "news
 sexR2 = gtrends(sex2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 sexR3 = gtrends(sex3, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 sexR4 = gtrends(sex4, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
+Sys.sleep(sample(1:10, 1))
 urologyR1 = gtrends(urology1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 urologyR2 = gtrends(urology2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-  
+Sys.sleep(sample(1:10, 1))
 pediatricR1 = gtrends(pediatric1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
+Sys.sleep(sample(1:10, 1))
 oncologyR1=gtrends(oncology1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
+Sys.sleep(sample(1:10, 1))
 eentR1 = gtrends(eent1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 eentR2 = gtrends(eent2, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
+Sys.sleep(sample(1:10, 1))
 cardioR1 = gtrends(cardio1, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
-
+Sys.sleep(sample(1:10, 1))
 fluR = gtrends(flu, geo = googleGeo, time = googleTime, gprop = c("web", "news", "images", "froogle", "youtube"),  hl = "en-US")
 
 #------------Drug Corner---------------------------
@@ -152,7 +152,8 @@ plot(psychRs1)
 plot(psychRs2)
 plot(psychRs3)
 
-plot(dentalR1)
+
+plot(dentalR1$interest_over_time$geo)
 plot(dentalR2)
 
 plot(sexR1)
