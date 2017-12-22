@@ -26,11 +26,11 @@ qplot(x=term, y=count, data=paxil_ages)
 qplot(x=term, y=count, data=zoloft_ages)
 
 library(gtrendsR)
-google.trends = gtrends(c("bitcoin bubble"), geo = c("CA"), gprop = "web", time = "2010-06-30 2017-06-30")[[1]]
+#google.trends = gtrends(c("bitcoin bubble"), geo = c("CA"), gprop = "web", time = "2010-06-30 2017-06-30")[[1]]
 
 library("rvest")
 
-googleGeo = "US-TN"
+googleGeo = "US-ID-208"
 googleTime= "today+5-y"
 
 fentanyl1 = c("china girl", "china white", "dance fever", "king ivory", "fentanyl")
@@ -153,7 +153,7 @@ plot(psychRs2)
 plot(psychRs3)
 
 
-plot(dentalR1$interest_over_time$geo)
+plot(dentalR1)
 plot(dentalR2)
 
 plot(sexR1)
